@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4001CD061F711BC000C38E6A /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4001CD051F711BC000C38E6A /* AdobeCreativeSDKCore.framework */; };
+		4001CD081F711BD000C38E6A /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4001CD071F711BD000C38E6A /* AdobeCreativeSDKImage.framework */; };
+		4001CD091F711BFC00C38E6A /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4001CD071F711BD000C38E6A /* AdobeCreativeSDKImage.framework */; };
+		4001CD0A1F711BFC00C38E6A /* AdobeCreativeSDKImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4001CD071F711BD000C38E6A /* AdobeCreativeSDKImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4001CD0C1F711C0A00C38E6A /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4001CD051F711BC000C38E6A /* AdobeCreativeSDKCore.framework */; };
+		4001CD0D1F711C0A00C38E6A /* AdobeCreativeSDKCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4001CD051F711BC000C38E6A /* AdobeCreativeSDKCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		402C73071F6FC60A00BB4D2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402C73061F6FC60A00BB4D2F /* GoogleService-Info.plist */; };
 		40CEA3681F6F67DD00EB3268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CEA3671F6F67DD00EB3268 /* AppDelegate.swift */; };
 		40CEA36A1F6F67DD00EB3268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CEA3691F6F67DD00EB3268 /* ViewController.swift */; };
@@ -21,8 +27,26 @@
 		DD315502B08D7A6183C43CD7 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186B6082D2E05B04CEE16395 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4001CD0B1F711BFC00C38E6A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4001CD0A1F711BFC00C38E6A /* AdobeCreativeSDKImage.framework in Embed Frameworks */,
+				4001CD0D1F711C0A00C38E6A /* AdobeCreativeSDKCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		186B6082D2E05B04CEE16395 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4001CD051F711BC000C38E6A /* AdobeCreativeSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKCore.framework; sourceTree = "<group>"; };
+		4001CD071F711BD000C38E6A /* AdobeCreativeSDKImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKImage.framework; sourceTree = "<group>"; };
+		4001CD0F1F711CD100C38E6A /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = "<group>"; };
 		402C73061F6FC60A00BB4D2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4058D07379F5568A2E18A474 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		40CEA3641F6F67DD00EB3268 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +70,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD315502B08D7A6183C43CD7 /* Pods_Instagram.framework in Frameworks */,
+				4001CD081F711BD000C38E6A /* AdobeCreativeSDKImage.framework in Frameworks */,
+				4001CD0C1F711C0A00C38E6A /* AdobeCreativeSDKCore.framework in Frameworks */,
+				4001CD091F711BFC00C38E6A /* AdobeCreativeSDKImage.framework in Frameworks */,
+				4001CD061F711BC000C38E6A /* AdobeCreativeSDKCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +101,8 @@
 		40CEA3661F6F67DD00EB3268 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				4001CD071F711BD000C38E6A /* AdobeCreativeSDKImage.framework */,
+				4001CD051F711BC000C38E6A /* AdobeCreativeSDKCore.framework */,
 				40CEA3671F6F67DD00EB3268 /* AppDelegate.swift */,
 				40CEA3691F6F67DD00EB3268 /* ViewController.swift */,
 				40CEA36B1F6F67DD00EB3268 /* Main.storyboard */,
@@ -85,6 +115,7 @@
 				40CEA3701F6F67DD00EB3268 /* LaunchScreen.storyboard */,
 				40CEA3731F6F67DD00EB3268 /* Info.plist */,
 				402C73061F6FC60A00BB4D2F /* GoogleService-Info.plist */,
+				4001CD0F1F711CD100C38E6A /* Instagram-Bridging-Header.h */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -119,6 +150,8 @@
 				40CEA3621F6F67DD00EB3268 /* Resources */,
 				DE4017F98D99649BF1932979 /* [CP] Embed Pods Frameworks */,
 				A01EE989B5FD1AF65A2AF52D /* [CP] Copy Pods Resources */,
+				4001CD0B1F711BFC00C38E6A /* Embed Frameworks */,
+				4001CD0E1F711C6F00C38E6A /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -192,6 +225,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		4001CD0E1F711C6F00C38E6A /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdobeCreativeSDKCore.framework/strip-frameworks.sh\"";
 		};
 		A01EE989B5FD1AF65A2AF52D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -360,10 +407,15 @@
 			baseConfigurationReference = 4058D07379F5568A2E18A474 /* Pods-Instagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Instagram",
+				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shouta.ikegami.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Instagram/Instagram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -373,10 +425,15 @@
 			baseConfigurationReference = CC90934721B24F5A018664B4 /* Pods-Instagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Instagram",
+				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.shouta.ikegami.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Instagram/Instagram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
