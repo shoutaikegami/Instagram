@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -95,12 +96,62 @@
                     <view key="view" contentMode="scaleToFill" id="0UE-5W-McM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="um6-Im-odf">
+                                <rect key="frame" x="16" y="40" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="XvT-da-tY9"/>
+                                    <constraint firstAttribute="width" constant="120" id="uw5-r1-Qw9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-h4-yAR">
+                                <rect key="frame" x="37.5" y="230" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="blG-xB-Ras"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="oJt-Wl-3sT" eventType="touchUpInside" id="vtc-MJ-EqH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VN5-50-53d">
+                                <rect key="frame" x="37.5" y="180" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="LcV-Hd-G41"/>
+                                </constraints>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="oJt-Wl-3sT" eventType="touchUpInside" id="oaW-AO-MbV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キャプション" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4T-ON-zpv">
+                                <rect key="frame" x="146" y="130" width="213" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HXl-h4-yAR" firstAttribute="centerX" secondItem="0UE-5W-McM" secondAttribute="centerX" id="7l9-mr-tFf"/>
+                            <constraint firstItem="um6-Im-odf" firstAttribute="leading" secondItem="0UE-5W-McM" secondAttribute="leadingMargin" id="Am4-1v-Adp"/>
+                            <constraint firstItem="b4T-ON-zpv" firstAttribute="leading" secondItem="um6-Im-odf" secondAttribute="trailing" constant="10" id="Auu-RL-Q2q"/>
+                            <constraint firstItem="VN5-50-53d" firstAttribute="centerX" secondItem="0UE-5W-McM" secondAttribute="centerX" id="K26-cx-BuN"/>
+                            <constraint firstItem="HXl-h4-yAR" firstAttribute="top" secondItem="VN5-50-53d" secondAttribute="bottom" constant="10" id="OqM-PW-wIj"/>
+                            <constraint firstItem="b4T-ON-zpv" firstAttribute="trailing" secondItem="0UE-5W-McM" secondAttribute="trailingMargin" id="SCK-tT-cVB"/>
+                            <constraint firstItem="VN5-50-53d" firstAttribute="top" secondItem="b4T-ON-zpv" secondAttribute="bottom" constant="20" id="Yfg-Am-gWc"/>
+                            <constraint firstItem="b4T-ON-zpv" firstAttribute="bottom" secondItem="um6-Im-odf" secondAttribute="bottom" id="nKL-hD-Qo1"/>
+                            <constraint firstItem="um6-Im-odf" firstAttribute="top" secondItem="nnW-5C-74Z" secondAttribute="bottom" constant="20" id="q9o-Gf-YTM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="um6-Im-odf" id="ke1-pW-bZs"/>
+                        <outlet property="textField" destination="b4T-ON-zpv" id="XBh-I8-DQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6n-ZQ-UJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="843"/>
+            <point key="canvasLocation" x="799.20000000000005" y="842.42878560719646"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="0Xr-VI-5lJ">
@@ -259,8 +310,23 @@
                     <view key="view" contentMode="scaleToFill" id="KEn-1N-844">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ax-0H-zYW">
+                                <rect key="frame" x="16" y="20" width="343" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3ax-0H-zYW" firstAttribute="leading" secondItem="KEn-1N-844" secondAttribute="leadingMargin" id="5il-AD-saJ"/>
+                            <constraint firstItem="X3U-Lz-Qsa" firstAttribute="top" secondItem="3ax-0H-zYW" secondAttribute="bottom" constant="25" id="6Vc-YX-v1d"/>
+                            <constraint firstItem="3ax-0H-zYW" firstAttribute="top" secondItem="58p-V3-kbZ" secondAttribute="bottom" id="XVb-kc-lPF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ax-0H-zYW" secondAttribute="trailing" id="vTv-Cd-4HS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="3ax-0H-zYW" id="epi-rt-t81"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1d8-fb-dFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
