@@ -2,21 +2,28 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    var viewController: UIViewController!
+    
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
+    @IBAction func commentButton(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let commentView = storyboard.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        viewController.present(commentView, animated: true, completion: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func setPostData(postData: PostData) {

@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="475.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sy7-Ga-vjA">
@@ -55,7 +55,7 @@
                         <rect key="frame" x="118" y="337" width="65" height="30"/>
                         <state key="normal" title="comment"/>
                         <connections>
-                            <action selector="commentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Bg-mB-Qmz"/>
+                            <action selector="commentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wAV-Za-3UP"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbu-vb-P2o">

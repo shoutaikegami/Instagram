@@ -16,6 +16,9 @@
 		402C73071F6FC60A00BB4D2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402C73061F6FC60A00BB4D2F /* GoogleService-Info.plist */; };
 		408ADD421F722B7E00F7233D /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408ADD401F722B7E00F7233D /* PostTableViewCell.swift */; };
 		408ADD431F722B7E00F7233D /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408ADD411F722B7E00F7233D /* PostTableViewCell.xib */; };
+		40989B611F76A1C100CDCE8E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40989B601F76A1C100CDCE8E /* CommentViewController.swift */; };
+		40989B641F76A21400CDCE8E /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40989B621F76A21400CDCE8E /* CommentTableViewCell.swift */; };
+		40989B651F76A21400CDCE8E /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40989B631F76A21400CDCE8E /* CommentTableViewCell.xib */; };
 		40CEA3681F6F67DD00EB3268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CEA3671F6F67DD00EB3268 /* AppDelegate.swift */; };
 		40CEA36A1F6F67DD00EB3268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CEA3691F6F67DD00EB3268 /* ViewController.swift */; };
 		40CEA36D1F6F67DD00EB3268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CEA36B1F6F67DD00EB3268 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		4058D07379F5568A2E18A474 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		408ADD401F722B7E00F7233D /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		408ADD411F722B7E00F7233D /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		40989B601F76A1C100CDCE8E /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		40989B621F76A21400CDCE8E /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		40989B631F76A21400CDCE8E /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		40CEA3641F6F67DD00EB3268 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CEA3671F6F67DD00EB3268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40CEA3691F6F67DD00EB3268 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,9 @@
 				40CEA3671F6F67DD00EB3268 /* AppDelegate.swift */,
 				40CEA3691F6F67DD00EB3268 /* ViewController.swift */,
 				40CEA36B1F6F67DD00EB3268 /* Main.storyboard */,
+				40989B601F76A1C100CDCE8E /* CommentViewController.swift */,
+				40989B621F76A21400CDCE8E /* CommentTableViewCell.swift */,
+				40989B631F76A21400CDCE8E /* CommentTableViewCell.xib */,
 				4001CD101F72249800C38E6A /* Const.swift */,
 				40CEA3791F6F692E00EB3268 /* LoginViewController.swift */,
 				40CEA37B1F6F693C00EB3268 /* HomeViewController.swift */,
@@ -211,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40CEA3721F6F67DD00EB3268 /* LaunchScreen.storyboard in Resources */,
+				40989B651F76A21400CDCE8E /* CommentTableViewCell.xib in Resources */,
 				408ADD431F722B7E00F7233D /* PostTableViewCell.xib in Resources */,
 				402C73071F6FC60A00BB4D2F /* GoogleService-Info.plist in Resources */,
 				40CEA36F1F6F67DD00EB3268 /* Assets.xcassets in Resources */,
@@ -294,9 +304,11 @@
 				40CEA3681F6F67DD00EB3268 /* AppDelegate.swift in Sources */,
 				40CEA37E1F6F694F00EB3268 /* ImageSelectViewController.swift in Sources */,
 				4001CD111F72249800C38E6A /* Const.swift in Sources */,
+				40989B641F76A21400CDCE8E /* CommentTableViewCell.swift in Sources */,
 				408ADD421F722B7E00F7233D /* PostTableViewCell.swift in Sources */,
 				40CEA3821F6F696B00EB3268 /* SettingViewController.swift in Sources */,
 				40CEA37C1F6F693C00EB3268 /* HomeViewController.swift in Sources */,
+				40989B611F76A1C100CDCE8E /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

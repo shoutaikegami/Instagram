@@ -107,6 +107,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(sender:event:)), for: UIControlEvents.touchUpInside)
         
+        cell.viewController = self
+        
         return cell
     }
     
