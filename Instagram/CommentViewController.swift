@@ -11,9 +11,11 @@ class CommentViewController: UIViewController {
     // コメントボタンをタップした時の処理
     @IBAction func commentButton(_ sender: Any) {
         
+        postData.comments.append(commentTextField.text!)
+        
         // commentsをFirebaseに保存する
         let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
-        let comments = ["comments": commentTextField.text!]
+        let comments = ["comments": postData.comments]
         postRef.updateChildValues(comments)
         
         // HUDで投稿完了を表示する
