@@ -1,11 +1,3 @@
-//
-//  CommentViewController.swift
-//  Instagram
-//
-//  Created by 池上尚汰 on 2017/09/23.
-//  Copyright © 2017年 shouta.ikegami. All rights reserved.
-//
-
 import UIKit
 
 class CommentViewController: UIViewController {

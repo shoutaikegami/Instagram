@@ -344,17 +344,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-tY-uWC">
-                                <rect key="frame" x="0.0" y="20" width="375" height="622"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-gm-cY2">
+                                <rect key="frame" x="44" y="238" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wKO-nf-whg"/>
+                                </constraints>
+                                <state key="normal" title="コメントする" backgroundImage="btn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-Mt-Etn">
+                                <rect key="frame" x="44" y="288" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Jv6-9r-dq7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="キャンセル" backgroundImage="btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="コメントを入力してください" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uIQ-hx-9Sq">
+                                <rect key="frame" x="44" y="100" width="300" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1Qd-zC-VnM"/>
+                                    <constraint firstAttribute="width" constant="300" id="QsE-ja-FIF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CTG-tY-uWC" firstAttribute="leading" secondItem="Hxe-0T-Izt" secondAttribute="leading" id="Ef8-R8-ub3"/>
-                            <constraint firstAttribute="trailing" secondItem="CTG-tY-uWC" secondAttribute="trailing" id="WCj-2l-dCY"/>
-                            <constraint firstItem="CTG-tY-uWC" firstAttribute="top" secondItem="els-Ym-ClB" secondAttribute="bottom" id="i4V-E3-eDk"/>
-                            <constraint firstItem="yoL-V2-4nF" firstAttribute="top" secondItem="CTG-tY-uWC" secondAttribute="bottom" constant="25" id="sAF-EQ-Gz9"/>
+                            <constraint firstItem="Jw7-Mt-Etn" firstAttribute="top" secondItem="a0Y-gm-cY2" secondAttribute="bottom" constant="10" id="K8w-uh-LGk"/>
+                            <constraint firstItem="a0Y-gm-cY2" firstAttribute="top" secondItem="uIQ-hx-9Sq" secondAttribute="bottom" constant="10" id="M8M-nv-40z"/>
+                            <constraint firstItem="uIQ-hx-9Sq" firstAttribute="leading" secondItem="Hxe-0T-Izt" secondAttribute="leadingMargin" constant="28" id="Pba-uq-iZT"/>
+                            <constraint firstItem="Jw7-Mt-Etn" firstAttribute="centerX" secondItem="uIQ-hx-9Sq" secondAttribute="centerX" id="aNW-Jg-3TI"/>
+                            <constraint firstItem="a0Y-gm-cY2" firstAttribute="centerX" secondItem="uIQ-hx-9Sq" secondAttribute="centerX" id="dE1-g0-ghP"/>
+                            <constraint firstItem="uIQ-hx-9Sq" firstAttribute="top" secondItem="els-Ym-ClB" secondAttribute="bottom" constant="80" id="vdj-aB-pRU"/>
                         </constraints>
                     </view>
                 </viewController>
