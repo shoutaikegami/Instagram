@@ -345,14 +345,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-gm-cY2">
-                                <rect key="frame" x="44" y="238" width="300" height="40"/>
+                                <rect key="frame" x="44" y="140" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="wKO-nf-whg"/>
                                 </constraints>
                                 <state key="normal" title="コメントする" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="izl-ji-7kb" eventType="touchUpInside" id="tyh-uu-PWV"/>
+                                    <action selector="commentButton:" destination="izl-ji-7kb" eventType="touchUpInside" id="GBh-d7-CTb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-Mt-Etn">
-                                <rect key="frame" x="44" y="288" width="300" height="40"/>
+                                <rect key="frame" x="44" y="190" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Jv6-9r-dq7"/>
                                 </constraints>
@@ -360,28 +364,34 @@
                                 <state key="normal" title="キャンセル" backgroundImage="btn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="izl-ji-7kb" eventType="touchUpInside" id="r16-Nh-fjI"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="コメントを入力してください" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uIQ-hx-9Sq">
-                                <rect key="frame" x="44" y="100" width="300" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHh-Bf-374">
+                                <rect key="frame" x="44" y="100" width="300" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="1Qd-zC-VnM"/>
-                                    <constraint firstAttribute="width" constant="300" id="QsE-ja-FIF"/>
+                                    <constraint firstAttribute="height" constant="30" id="6aC-q6-nZf"/>
+                                    <constraint firstAttribute="width" constant="300" id="FcW-Wi-XT7"/>
                                 </constraints>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rHh-Bf-374" firstAttribute="leading" secondItem="Hxe-0T-Izt" secondAttribute="leadingMargin" constant="28" id="0JX-hU-UMR"/>
                             <constraint firstItem="Jw7-Mt-Etn" firstAttribute="top" secondItem="a0Y-gm-cY2" secondAttribute="bottom" constant="10" id="K8w-uh-LGk"/>
-                            <constraint firstItem="a0Y-gm-cY2" firstAttribute="top" secondItem="uIQ-hx-9Sq" secondAttribute="bottom" constant="10" id="M8M-nv-40z"/>
-                            <constraint firstItem="uIQ-hx-9Sq" firstAttribute="leading" secondItem="Hxe-0T-Izt" secondAttribute="leadingMargin" constant="28" id="Pba-uq-iZT"/>
-                            <constraint firstItem="Jw7-Mt-Etn" firstAttribute="centerX" secondItem="uIQ-hx-9Sq" secondAttribute="centerX" id="aNW-Jg-3TI"/>
-                            <constraint firstItem="a0Y-gm-cY2" firstAttribute="centerX" secondItem="uIQ-hx-9Sq" secondAttribute="centerX" id="dE1-g0-ghP"/>
-                            <constraint firstItem="uIQ-hx-9Sq" firstAttribute="top" secondItem="els-Ym-ClB" secondAttribute="bottom" constant="80" id="vdj-aB-pRU"/>
+                            <constraint firstItem="a0Y-gm-cY2" firstAttribute="top" secondItem="rHh-Bf-374" secondAttribute="bottom" constant="10" id="NeO-EE-qN1"/>
+                            <constraint firstItem="Jw7-Mt-Etn" firstAttribute="centerX" secondItem="rHh-Bf-374" secondAttribute="centerX" id="OkJ-Bh-6du"/>
+                            <constraint firstItem="a0Y-gm-cY2" firstAttribute="centerX" secondItem="rHh-Bf-374" secondAttribute="centerX" id="Rce-0o-JAj"/>
+                            <constraint firstItem="rHh-Bf-374" firstAttribute="top" secondItem="els-Ym-ClB" secondAttribute="bottom" constant="80" id="rtQ-Ds-8tV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="rHh-Bf-374" id="OrV-mP-GGQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8c9-La-oc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
