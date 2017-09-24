@@ -47,7 +47,7 @@ class SettingViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    // ログアウトボタンをタップした時に呼ばれすメソッド
+    // ログアウトボタンをタップした時に呼ばれるメソッド
     @IBAction func handleLogoutButton(_ sender: Any) {
         // ログアウトする
         try! Auth.auth().signOut()

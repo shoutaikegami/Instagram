@@ -20,7 +20,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // テーブルのタップのセルを無効にする
         tableView.allowsSelection = false
-        
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -137,7 +136,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Firebaseに保存するデータの準備
         if let uid = Auth.auth().currentUser?.uid {
             if postData.isLiked {
-                // すでにいいねをしていた場合はいいねを解除するためISを取り除く
+                // すでにいいねをしていた場合はいいねを解除するためを取り除く
                 var index = -1
                 for likeId in postData.likes {
                     if likeId == uid {

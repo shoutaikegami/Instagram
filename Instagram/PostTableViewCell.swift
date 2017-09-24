@@ -9,10 +9,14 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var commentsLabel: UILabel!
+    
+    var postData: PostData!
     
     @IBAction func commentButton(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let commentView = storyboard.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        commentView.postData = self.postData
         viewController.present(commentView, animated: true, completion: nil)
     }
     
@@ -27,6 +31,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func setPostData(postData: PostData) {
+        self.postData = postData
         self.postImageView.image = postData.image
         
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
@@ -49,4 +54,5 @@ class PostTableViewCell: UITableViewCell {
         }
         
     }
+    
 }
