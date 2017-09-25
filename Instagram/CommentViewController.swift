@@ -13,9 +13,13 @@ class CommentViewController: UIViewController {
         
         postData.comments.append(commentTextField.text!)
         
+        let commentName = Auth.auth().currentUser?.displayName
+        
+        postData.commentName.append(commentName!)
+        
         // commentsをFirebaseに保存する
         let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
-        let comments = ["comments": postData.comments]
+        let comments = ["comments": postData.comments, "commentName": postData.commentName]
         postRef.updateChildValues(comments)
         
         // HUDで投稿完了を表示する
