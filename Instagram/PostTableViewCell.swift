@@ -10,6 +10,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
+    @IBOutlet weak var comLabel: UILabel!
     
     var postData: PostData!
     
@@ -52,6 +53,20 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: UIControlState.normal)
         }
+        
+        for commentName in postData.commentName {
+            var str = self.commentsLabel.text!
+            str += "\(commentName)\n"
+            commentsLabel.text = str
+        }
+        
+        for comment in postData.comments {
+            var str2 = self.comLabel.text!
+            str2 += "\(comment)\n"
+            comLabel.text = str2
+        }
+
+        
         
     }
     
